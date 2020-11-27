@@ -11,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Faircorp" >
-        <activity android:name=".ListDataActivity" />
+        <activity
+            android:name=".ListDataActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".WindowActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ListDataActivity" />
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

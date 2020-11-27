@@ -23,6 +23,7 @@ class ListDataActivity : BasicActivity(), OnWindowSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_data)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val recyclerView = findViewById<RecyclerView>(R.id.list_windows)
         val adapter = WindowAdapter(this)
