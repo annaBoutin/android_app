@@ -17,6 +17,7 @@
     <string name="menu_windows">Building windows</string>
     <string name="menu_website">Our website</string>
     <string name="menu_email">Send us an email</string>
+    <string name="menu_rooms">Building rooms</string>
     <string name="title_activity_basic_acivity">BasicAcivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
