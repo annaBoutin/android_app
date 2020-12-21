@@ -18,6 +18,7 @@
     <string name="act_room_floor">Room floor</string>
     <string name="act_room_target_temp">Target temperature</string>
     <string name="act_room_current_temp">Current temperature</string>
+    <string name="act_room_windows_list">Windows List</string>
 
     <string name="menu_windows">Building windows</string>
     <string name="menu_website">Our website</string>
