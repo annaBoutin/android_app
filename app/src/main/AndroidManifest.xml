@@ -12,8 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Faircorp">
         <activity
+            android:name=".RoomActivity"
+            android:parentActivityName=".RoomsActivity"></activity>
+        <activity
             android:name=".RoomsActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ListDataActivity"
             android:parentActivityName=".MainActivity" />

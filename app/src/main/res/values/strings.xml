@@ -14,6 +14,8 @@
 
     <string name="act_list_data_building">Building windows</string>
 
+    <string name="act_room_name">Room name</string>
+
     <string name="menu_windows">Building windows</string>
     <string name="menu_website">Our website</string>
     <string name="menu_email">Send us an email</string>

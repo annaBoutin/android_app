@@ -1,5 +1,6 @@
 package com.faircorp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -8,20 +9,21 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.faircorp.model.ApiServices
+import com.faircorp.model.OnRoomSelectedListener
 import com.faircorp.model.RoomAdapter
 import com.faircorp.model.WindowAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class RoomsActivity : BasicActivity() {
+class RoomsActivity : BasicActivity(), OnRoomSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rooms)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val recyclerView = findViewById<RecyclerView>(R.id.list_rooms)
-        val adapter = RoomAdapter()
+        val adapter = RoomAdapter(this)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
@@ -45,5 +47,10 @@ class RoomsActivity : BasicActivity() {
                     }
                 }
         }
+    }
+
+    override fun onRoomSelected(id: Long) {
+        val intent = Intent(this, RoomActivity::class.java).putExtra(ROOM_NAME_PARAM, id)
+        startActivity(intent)
     }
 }
