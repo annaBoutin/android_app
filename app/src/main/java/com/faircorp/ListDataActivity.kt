@@ -18,7 +18,7 @@ import kotlinx.coroutines.withContext
 
 class ListDataActivity : BasicActivity(), OnWindowSelectedListener {
 
-    val windowService = WindowService()
+    //val windowService = WindowService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

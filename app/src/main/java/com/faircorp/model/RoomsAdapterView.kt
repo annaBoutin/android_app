@@ -12,6 +12,7 @@ class RoomAdapter : RecyclerView.Adapter<RoomAdapter.RoomViewHolder>() {
     inner class RoomViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val name : TextView = view.findViewById(R.id.txt_room_list_name)
         val temp : TextView = view.findViewById(R.id.txt_current_temp)
+        val floor : TextView = view.findViewById(R.id.txt_room_floor)
     }
 
     private val items = mutableListOf<RoomDto>()
@@ -35,6 +36,7 @@ class RoomAdapter : RecyclerView.Adapter<RoomAdapter.RoomViewHolder>() {
         holder.apply {
             name.text = room.name
             temp.text = room.currentTemperature.toString()
+            floor.text = room.floor
         }
     }
 }

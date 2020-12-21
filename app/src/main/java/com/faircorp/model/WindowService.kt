@@ -1,7 +1,7 @@
 package com.faircorp.model
 
 class WindowService {
-
+/*
     companion object {
         // Fake rooms
         val ROOMS: List<RoomDto> = listOf(
@@ -23,4 +23,6 @@ class WindowService {
     fun findById(id: Long) = WINDOWS.firstOrNull { it.id == id}
 
     fun findAll() = WINDOWS.sortedBy { it.name }
+
+ */
 }
