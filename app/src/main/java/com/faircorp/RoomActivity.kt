@@ -1,6 +1,5 @@
 package com.faircorp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
@@ -25,6 +24,17 @@ class RoomActivity : BasicActivity() {
                         val room = it.body()
                         if (room != null) {
                             findViewById<TextView>(R.id.txt_room_room_name).text = room.name
+                            findViewById<TextView>(R.id.txt_room_room_floor).text = room.floor
+                            if (room.currentTemp.toString() == "null") {
+                                findViewById<TextView>(R.id.txt_room_room_current_temp).text = "No Data"
+                            } else {
+                                findViewById<TextView>(R.id.txt_room_room_current_temp).text = room.currentTemp.toString()
+                            }
+                            if (room.targetTemp.toString() == "null"){
+                                findViewById<TextView>(R.id.txt_room_room_target_temp).text = "No Data"
+                            } else {
+                                findViewById<TextView>(R.id.txt_room_room_target_temp).text = room.targetTemp.toString()
+                            }
                         }
 
                     }
