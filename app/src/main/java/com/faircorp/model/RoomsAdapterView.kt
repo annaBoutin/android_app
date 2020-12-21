@@ -25,17 +25,21 @@ class RoomAdapter : RecyclerView.Adapter<RoomAdapter.RoomViewHolder>() {
 
     override fun getItemCount(): Int = items.size
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomViewHolder { // (6)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.activity_rooms_item, parent, false)
         return RoomViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: RoomViewHolder, position: Int) {  // (7)
+    override fun onBindViewHolder(holder: RoomViewHolder, position: Int) {
         val room = items[position]
         holder.apply {
             name.text = room.name
-            temp.text = room.currentTemp.toString()
+            if (room.currentTemp.toString() == "null") {
+                temp.text = "No Data"
+            } else {
+                temp.text = room.currentTemp.toString()
+            }
             floor.text = room.floor
         }
     }
