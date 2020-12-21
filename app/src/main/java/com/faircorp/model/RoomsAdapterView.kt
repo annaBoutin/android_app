@@ -35,7 +35,7 @@ class RoomAdapter : RecyclerView.Adapter<RoomAdapter.RoomViewHolder>() {
         val room = items[position]
         holder.apply {
             name.text = room.name
-            temp.text = room.currentTemperature.toString()
+            temp.text = room.currentTemp.toString()
             floor.text = room.floor
         }
     }
